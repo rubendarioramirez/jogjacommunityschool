@@ -16,9 +16,9 @@ if (!empty($_SESSION['log_in']))
 <head>
 <title>Jogjakarta Community School</title>
 
-<link href="web/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
-<link href="web/css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="web/css/timeline.css" rel='stylesheet' type='text/css' />
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/timeline.css" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
  <!--[if lt IE 9]>
@@ -27,16 +27,13 @@ if (!empty($_SESSION['log_in']))
 <![endif]-->
 
 <!-- start plugins -->
-<script type="text/javascript" src="web/js/jquery.min.js"></script>
-<script type="text/javascript" src="web/js/bootstrap.js"></script>
-<script type="text/javascript" src="web/js/bootstrap.min.js"></script>
-<!-- start slider -->
-<link href="web/css/slider.css" rel="stylesheet" type="text/css" media="all" />
-
-<script type="text/javascript" src="web/js/modernizr.custom.28468.js"></script>
-<script type="text/javascript" src="web/js/jquery.cslider.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 </head>
+
 <!-- Old nav bar -->
 <div class="container">
   <div class="row h_menu">
@@ -59,50 +56,23 @@ if (!empty($_SESSION['log_in']))
             <li class="active"><a href="timeline.php">JCS Events</a></li> 
             <li><a href="blog.php">JCS Community</a></li> <?php } ?>
             <li><a href="contact.php">Contact</a></li>
+            <li class="divider"></li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+    </nav>
+                </ul>
+              </div>
+                 
+              </div>
+            </div>
+          </div>
 
-        <!--Check if you are logged in, if you are not then shows Login function-->
-            <?php if($logged_in==false){ ?>
-        <li class="dropdown">
-                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign in <b class="caret"></b></a>
-                     <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
-                        <li>
-                           <div class="row">
-                              <div class="col-md-12">
-                                 <form class="form" role="form" method="post" action="check_login.php" accept-charset="UTF-8" id="login-nav">
-                                    <div class="form-group">
-                                       <label class="sr-only">User Name</label>
-                                       <input type="name" name="username" class="form-control" id="exampleInputName2" placeholder="Email address" required>
-                                      <input type="hidden" name="lastpage" value="index.php" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                       <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                       <input type="password" name="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                    </div>
-                                    <div class="form-group">
-                                       <button type="submit" class="btn btn-success btn-block">Sign in</button>
-                                    </div>
-                                 </form>
-                              </div>
-                           </div>
-                        </li>
-                        <li class="divider"></li>
-                     </ul>
-                  </li>
-  </div>
-  <div class="clearfix"></div>
-                  <?php } ?>
 
-                 <!--Check if you are logged in, if you are then shows LOGOUT function-->
-                 <?php if($logged_in==true){ ?>
-        <li><a href="logout.php">Logout</a></li>
-            <?php }  ?>
-              </nav>
-      </ul>
-    </div>
-      </ul> 
-    </div>
-  </div>
-</div>
+
+
+
+
 <div class="container">
     <div class="page-header text-center">
         <h1 id="timeline" class="pull-left">Our last events</h1>
